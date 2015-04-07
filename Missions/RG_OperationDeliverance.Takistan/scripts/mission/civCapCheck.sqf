@@ -18,7 +18,7 @@ while {alive _unit} do {
 	hint "got into while";
 	if (_unit getVariable ["AGM_isCaptive", false]) then {
 		hint "captured";
-		// execute code for opfor win and break loop
+		"end2" call BIS_fnc_endMission;
 		break;
 	}
 	else {
