@@ -21,7 +21,8 @@ class Mission
 		"A3_Soft_F_Truck",
 		"alive_amb_civ_population",
 		"agm_nametags",
-		"alive_sys_profile"
+		"alive_sys_profile",
+		"AGM_Core"
 	};
 	addOnsAuto[]=
 	{
@@ -42,7 +43,8 @@ class Mission
 		"alive_amb_civ_population",
 		"agm_nametags",
 		"alive_sys_profile",
-		"A3_Soft_F_Truck"
+		"A3_Soft_F_Truck",
+		"AGM_Core"
 	};
 	randomSeed=9628448;
 	class Intel
@@ -839,10 +841,10 @@ class Mission
 					id=16;
 					side="CIV";
 					vehicle="LOP_Afg_civ_02";
-					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="hvt";
+					init="null = [hvt, 5] execVM ""scripts\mission\civCapCheck.sqf""";
 				};
 			};
 		};
@@ -1186,7 +1188,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
 			position[]={6667.3169,176.09799,7449.2773};
@@ -1194,6 +1196,17 @@ class Mission
 			id=24;
 			side="EMPTY";
 			vehicle="C_Van_01_transport_F";
+			skill=0.60000002;
+		};
+		class Item1
+		{
+			position[]={836.95679,547.35498,10473.717};
+			azimut=95;
+			special="NONE";
+			id=25;
+			side="EMPTY";
+			vehicle="AGM_Box_Misc";
+			leader=1;
 			skill=0.60000002;
 		};
 	};
